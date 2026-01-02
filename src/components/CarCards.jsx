@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router-dom';
 
 const CarCards = ({cars}) => {
     const currency = import.meta.env.VITE_CURRENCY;
-    const naviagte = useNavigate();
+    const navigate = useNavigate();
   return (
     <div onClick={()=>{
-        naviagte(`/car-details/${cars._id}`); window.scrollTo(0,0)}}
+        navigate(`/car-details/${cars._id}`); window.scrollTo(0,0)}}
          className='group rounded-xl overflow-hidden shadow-lg hover:translate-y-1
     transition-all duration-500 cursor-pointer'>
         <div className='relative h-48 overflow-hidden'>

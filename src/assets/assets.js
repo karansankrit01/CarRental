@@ -42,6 +42,10 @@ import car_image2 from "./car_image2.png"
 import car_image3 from "./car_image3.png"
 import car_image4 from "./car_image4.png"
 import car_banner_image1 from "./banner_image1.png"
+import testimonial_image01 from "./testimonial_image01.jpeg"
+import testimonial_image02 from "./testimonial_image02.jpeg"
+import background_image from "./background_image.png"
+import logoo from "./logoo.png"
 
 export const cityList = ['New York', 'Los Angeles', 'Houston', 'Chicago']
 
@@ -89,7 +93,13 @@ export const assets = {
     car_image2,
     car_image3,
     car_image4,
-    car_banner_image1
+    car_banner_image1,
+    testimonial_image01,
+    testimonial_image02,
+    background_image,
+    logoo
+
+
 }
 
 export const menuLinks = [

@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className='h-screen flex flex-col items-center justify-center gap-14 bg-light text-center'>
 
-      <h1 className='text-4xl mt-8 font-semibold'>Luxury cars on rent</h1>
+      <h1 className='text-4xl mt-8 text-st font-semibold uppercase'>Luxury cars on rent</h1>
       <form  className='flex flex-col md:flex-row items-start md:items-center justify-between p-6 rounded-lg md:rounded-full w-full max-w-80 md:max-w-200 bg-white shadow-[opx_8px_20px_rgba(0,0,0,0.1)]'>
         <div className='flex flex-col md:flex-row items-start md:items-center gap-10 min_md:ml-8'>
           <div className='flex flex-col items-start gap-2'>
@@ -36,7 +36,11 @@ const Hero = () => {
             Search
             </button>
       </form>
-      <img src={assets.main_car1} alt="car" className='max-h-120' />
+      <div className='relative w-full flex justify-center items-center'>
+
+      <img src={assets.background_image} alt="background text" className='max-h-120 ml-190 hidden md:block' />
+      <img src={assets.main_car1} alt="car" className='absolute z-0 w-full max-h-150 object-contain mr-20'  />
+      </div>
       
     </div>
   )
