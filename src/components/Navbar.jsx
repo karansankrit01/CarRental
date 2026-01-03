@@ -22,7 +22,7 @@ const Navbar = () => {
             {menuLinks.map((link) => (
                 <Link 
                   key={link.name}
-                  to={link.link}
+                  to={link.path}
                 >
                   {link.name}
                 </Link>

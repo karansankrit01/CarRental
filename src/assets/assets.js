@@ -46,6 +46,9 @@ import testimonial_image01 from "./testimonial_image01.jpeg"
 import testimonial_image02 from "./testimonial_image02.jpeg"
 import background_image from "./background_image.png"
 import logoo from "./logoo.png"
+import user_profile1 from "./user_profile1.jpg"
+import save_icon from "./save_icon.png"
+
 
 export const cityList = ['New York', 'Los Angeles', 'Houston', 'Chicago']
 
@@ -97,7 +100,9 @@ export const assets = {
     testimonial_image01,
     testimonial_image02,
     background_image,
-    logoo
+    logoo,
+    user_profile1,
+    save_icon
 
 
 }
@@ -117,10 +122,10 @@ export const ownerMenuLinks = [
 
 export const dummyUserData = {
   "_id": "6847f7cab3d8daecdb517095",
-  "name": "GreatStack",
+  "name": "Karan Rajput",
   "email": "admin@example.com",
   "role": "owner",
-  "image": user_profile,
+  "image": user_profile1,
 }
 
 export const dummyCarData = [

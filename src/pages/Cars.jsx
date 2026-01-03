@@ -2,6 +2,7 @@ import React from "react";
 import Title from "../components/Title";
 import { assets, dummyCarData } from "../assets/assets";
 import { useState } from "react";
+import CarCards from "../components/CarCards";
 
 const Cars = () => {
   const [input, setInput] = useState("");
@@ -20,7 +21,7 @@ const Cars = () => {
             className="w-4.5 h-4.5 mr-2"
           />
           <input
-            onClick={(e) => {
+            onChange={(e) => {
               setInput(e.target.value);
             }}
             value={input}
@@ -36,10 +37,17 @@ const Cars = () => {
         </div>
       </div>
 
-      <div>
-        
+      <div className="px-6 md:px-16 lg:px-24 xl:px-32 mt-10">
+        <p className="text-gray-500 px-20 mx-auto">Showing {dummyCarData.length} cars</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4 xl:px-20 max-w-7xl mx-auto">
+        {dummyCarData.map((car,index)=>(
+          <div key={index}>
+            <CarCards cars={car} />
+          </div>
+        ))}
       </div>
     </div>
+  </div>
   );
 };
 

@@ -6,6 +6,12 @@ import Cars from './pages/Cars';
 import CarDetails from './pages/CarDetails';
 import MyBookings from './pages/MyBookings';
 import Footer from './components/Footer';
+import Layout from './pages/Owner/Layout';
+import AddCar from './pages/Owner/AddCar';
+import ManageBooking from './pages/Owner/ManageBooking';
+import ManageCars from './pages/Owner/ManageCars';
+import DashBoard from './pages/Owner/DashBoard';
+
 
 const App = () => {
   const isOwnerPath = useLocation().pathname.startsWith('/owner');
@@ -19,6 +25,15 @@ const App = () => {
       <Route path='/cars' element={<Cars />} />
       <Route path='/car-details/:id' element={<CarDetails />} />
       <Route path='/my-bookings' element={<MyBookings />} />
+
+      <Route path='/owner' element={<Layout />}>
+        <Route index element={<DashBoard />} />
+        <Route path='add-car' element={<AddCar/>}/>
+        <Route path='manage-cars' element={<ManageCars/>}/>
+        <Route path='manage-bookings' element={<ManageBooking/>}/>
+
+
+      </Route>
     </Routes>
     { !isOwnerPath && <Footer />}
     </>
