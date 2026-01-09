@@ -15,7 +15,6 @@ const MyBookings = () => {
     fetchBookings();
   }, []);
 
-
   return (
     <div className="px-6 md:px-16 lg:px-24 xl:px-32 2xl:px-48 mt-16 text-sm max-w-7xl  rounded-lg">
       <Title
@@ -92,18 +91,15 @@ const MyBookings = () => {
             </div>
             {/* price details */}
             <div className="md:col-span-1 flex flex-col justify-between gap-6">
-                  <div className="text-sm text-gray-500 text-right">
-                    
-                    <p>Total Price</p>
-                    <h1 className="text-2xl font-semi-bold text-primary">{currency}{booking.price}</h1>
-                    <p>Booking on {booking.createdAt.split('T')[0]}</p>
-                  </div>
-
+              <div className="text-sm text-gray-500 text-right">
+                <p>Total Price</p>
+                <h1 className="text-2xl font-semi-bold text-primary">
+                  {currency}
+                  {booking.price}
+                </h1>
+                <p>Booking on {booking.createdAt.split("T")[0]}</p>
+              </div>
             </div>
-
-
-
-
           </div>
         ))}
       </div>
