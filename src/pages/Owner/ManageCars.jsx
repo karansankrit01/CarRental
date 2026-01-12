@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import Title from '../../components/Title'  
+import Title from '../../components/Owner/Title'  
 import { assets, dummyCarData } from '../../assets/assets'
 
 const ManageCars = () => {
@@ -14,8 +14,8 @@ const ManageCars = () => {
   },[])
 
   return (
-    <div className='px-4 pt-10 md:px-10 w-full'>
-      <Title  title="Manage Cars" subtitle="View all listed cars, update their details, or remove them from the booking platform"/>
+    <div className='px-4 pt-10 md:px-10 w-full '>
+      <Title  title="Manage Cars" subTitle="View all listed cars, update their details, or remove them from the booking platform"/>
 
       <div className='max-w-3xl w-full rounded-md overflow-hidden border border-borderColor mt-6'>
 
@@ -59,7 +59,7 @@ const ManageCars = () => {
                         </span>  
                     </td>
                     <td className='flex items-center p-3'>
-                      <img src={car.isAvailable ? assets.eye_close_icon : assets.eye_open_icon} alt="" className='cursor-pointer'/>
+                      <img src={car.isAvailable ? assets.eye_close_icon : assets.eye_icon} alt="" className='cursor-pointer'/>
                       <img src={assets.delete_icon} alt="" className='cursor-pointer'/>
 
                     </td>
