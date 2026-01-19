@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken'
 
 // generate jwt token
 const generateToken = (userId)=>{
-    return jwt.sign({userId}, process.env.JWT_SECRETS);
+    return jwt.sign({userId}, process.env.JWT_SECRET);
 }
 
 // register user
@@ -54,7 +54,7 @@ export const loginUser = async(req,res)=>{
 export const getUserData= async (req,res)=>{
     try {
         const {user} = req;
-        Response.json({success : true, user})
+        res.json({success : true, user})
     } catch (error) {
         console.log(error.message);
         res.json({success:false, message :error.message})

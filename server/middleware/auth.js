@@ -9,7 +9,8 @@ const protect= async(req, res, next)=>{
         return res.json({success : false , message : "Not Authorized"})
     }
     try {
-        const userId = jwt.decode(token, process.env.JWT_SECRET)
+        const decoded = jwt.verify(token, process.env.JWT_SECRET)
+        const userId = decoded.userId
         
         if(!userId){
             return res.json({success : false , message : "Not Authorized"})
