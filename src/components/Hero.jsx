@@ -1,15 +1,17 @@
 import React from 'react'
 import { assets, cityList } from '../assets/assets'
 import { useState } from 'react'
-
+import ThreeBackground from './ThreeBackground'
 
 const Hero = () => {
   const [PickupLocation, setPickupLocation] = useState('')
   return (
-    <div className='h-screen flex flex-col items-center justify-center gap-14 bg-light text-center'>
+    <div className='relative h-screen flex flex-col items-center justify-center gap-14 bg-light text-center overflow-hidden'>
+      {/* 3D Background */}
+      <ThreeBackground />
 
-      <h1 className='text-4xl mt-8 text-st font-semibold uppercase'>Luxury cars on rent</h1>
-      <form  className='flex flex-col md:flex-row items-start md:items-center justify-between p-6 rounded-lg md:rounded-full w-full max-w-80 md:max-w-200 bg-white shadow-[opx_8px_20px_rgba(0,0,0,0.1)]'>
+      <h1 className='relative z-10 text-4xl mt-8 text-st font-semibold uppercase drop-shadow-md'>Luxury cars on rent</h1>
+      <form  className='relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between p-6 rounded-lg md:rounded-full w-full max-w-80 md:max-w-200 bg-white/80 backdrop-blur-md shadow-[0px_8px_20px_rgba(0,0,0,0.1)]'>
         <div className='flex flex-col md:flex-row items-start md:items-center gap-10 min_md:ml-8'>
           <div className='flex flex-col items-start gap-2'>
             <select required value={PickupLocation}
@@ -36,10 +38,10 @@ const Hero = () => {
             Search
             </button>
       </form>
-      <div className='relative w-full flex justify-center items-center'>
+      <div className='relative w-full flex justify-center items-center pointer-events-none z-10'>
 
-      <img src={assets.background_image} alt="background text" className='max-h-120 ml-190 hidden md:block' />
-      <img src={assets.main_car1} alt="car" className='absolute z-0 w-full max-h-150 object-contain mr-20'  />
+      <img src={assets.background_image} alt="background text" className='max-h-120 ml-190 hidden md:block opacity-80' />
+      <img src={assets.main_car1} alt="car" className='absolute z-0 w-full max-h-150 object-contain mr-20 drop-shadow-2xl'  />
       </div>
       
     </div>
